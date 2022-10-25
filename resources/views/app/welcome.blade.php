@@ -32,7 +32,7 @@
                             <div class="orb-deco"></div>
                             <div class="orb-slide-caption">
                                 <span class="orb-suptitle">Professional <br>photographers</span>
-                                <h1><span>Alexander<br>&amp; Alice&nbsp; </span></h1>
+                                <h1><span>Alexander<br>&amp; Alicia </span></h1>
                             </div>
                         </div>
                     </div>
