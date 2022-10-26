@@ -58,7 +58,7 @@ $(function () {
 
 	// =====================================================
 	// MOBILE HEIGHT FIX
-	// =====================================================	
+	// =====================================================
 	let vh = window.innerHeight * 0.01;
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
 
@@ -78,7 +78,7 @@ $(function () {
 
 	// =====================================================
 	// SLIDERS
-	// =====================================================	
+	// =====================================================
 	var swiper = new Swiper('.orb-slider-1s', {
 		slidesPerView: 1,
 		speed: 1200,
@@ -136,7 +136,7 @@ $(function () {
 
 	var swiper = new Swiper('.orb-slideshow', {
 		slidesPerView: 1,
-		speed: 1200,
+		speed: 3000,
 		parallax: true,
 		effect: 'fade',
 		pagination: {
@@ -144,7 +144,7 @@ $(function () {
 			type: "fraction",
 		},
 		autoplay: {
-			delay: 4000,
+			delay: 6000,
 		},
 		navigation: {
 			prevEl: '.orb-prev',
@@ -274,7 +274,7 @@ $(function () {
 
 		var swiper = new Swiper('.orb-slideshow', {
 			slidesPerView: 1,
-			speed: 1200,
+			speed: 3000,
 			parallax: true,
 			effect: 'fade',
 			pagination: {
@@ -282,7 +282,7 @@ $(function () {
 				type: "fraction",
 			},
 			autoplay: {
-				delay: 4000,
+				delay: 6000,
 			},
 			navigation: {
 				prevEl: '.orb-prev',
