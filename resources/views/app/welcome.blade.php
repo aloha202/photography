@@ -11,7 +11,7 @@
                                 <div class="swiper-container orb-slideshow">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <img src="/html/img/photo/1.jpeg" alt="photo" data-swiper-parallax-x="100" data-swiper-parallax-scale="1.3" data-swiper-parallax-opacity="0"
+                                            <img src="/html/img/photo/1.jpeg" alt="photo" data-swiper-parallax-x="50" data-swiper-parallax-scale="1.3" data-swiper-parallax-opacity="0"
                                                  data-swiper-parallax-duration="1200">
                                         </div>
                                         <div class="swiper-slide">
@@ -27,11 +27,11 @@
                                                  data-swiper-parallax-duration="1200">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="/html/img/photo/5.jpeg" alt="photo" data-swiper-parallax-x="100" data-swiper-parallax-scale="1.3" data-swiper-parallax-opacity="0"
+                                            <img src="/html/img/photo/5.jpeg" alt="photo" data-swiper-parallax-x="0" data-swiper-parallax-scale="1.3" data-swiper-parallax-opacity="0"
                                                  data-swiper-parallax-duration="1200">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="/html/img/photo/6.jpeg" alt="photo" data-swiper-parallax-x="100" data-swiper-parallax-scale="1.3" data-swiper-parallax-opacity="0"
+                                            <img src="/html/img/photo/6.jpeg" alt="photo" data-swiper-parallax-x="0" data-swiper-parallax-scale="1.3" data-swiper-parallax-opacity="0"
                                                  data-swiper-parallax-duration="1200">
                                         </div>
                                         <div class="swiper-slide">
@@ -39,7 +39,7 @@
                                                  data-swiper-parallax-duration="1200">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="/html/img/photo/8.jpeg" alt="photo" data-swiper-parallax-x="100" data-swiper-parallax-scale="1.3" data-swiper-parallax-opacity="0"
+                                            <img src="/html/img/photo/8.jpeg" alt="photo" data-swiper-parallax-x="50" data-swiper-parallax-scale="1.3" data-swiper-parallax-opacity="0"
                                                  data-swiper-parallax-duration="1200">
                                         </div>
                                         <div class="swiper-slide">
