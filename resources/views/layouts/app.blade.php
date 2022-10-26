@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="/html/css/plugins/fancybox.min.css">
     <!-- orabel css -->
     <link rel="stylesheet" href="/html/css/style.css">
+
+    <link rel="stylesheet" href="/html/css/new.css">
     <!-- page title -->
     <title>Alex & Alicia - professional photographers</title>
 </head>
