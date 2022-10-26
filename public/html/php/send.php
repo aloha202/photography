@@ -24,11 +24,12 @@
 	/* Validate User Inputs
 	==================================== */
 
-	// Name 
+	// Name
+    $errors = '';
 	if ($_POST['name'] != '') {
 
 		// Sanitizing
-		$_POST['name'] = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+		$_POST['name'] = @filter_var($_POST['name'], FILTER_SANITIZE_STRING);
 
 		if ($_POST['name'] == '') {
 			$errors .= 'Please enter a valid name.<br/>';
@@ -38,10 +39,10 @@
 		$errors .= 'Please enter your name.<br/>';
 	}
 
-	// Email 
+	// Email
 	if ($_POST['email'] != '') {
 
-		// Sanitizing 
+		// Sanitizing
 		$_POST['email'] = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
 		// After sanitization validation is performed
@@ -59,7 +60,7 @@
 	if ($_POST['message'] != '') {
 
 		// Sanitizing
-		$_POST['message'] = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+		$_POST['message'] = @filter_var($_POST['message'], FILTER_SANITIZE_STRING);
 
 		if ($_POST['message'] == '') {
 			$errors .= 'Please enter a valid message.<br/>';
@@ -78,10 +79,10 @@
 		==================================== */
 
 		// Setup for site owner
-		$to = "websolutions.ultimate@gmail.com"; // Your email goes here	
+		$to = "alexey.radyuk@gmail.com"; // Your email goes here
 		$subject = "Request";
-		
-		$headers = "From: Orabel <replyto@yourdomain.com>";		
+
+		$headers = "From: Orabel <replyto@yourdomain.com>";
 
 		$message = "Request is arrived with the details below." . "\n\n";
 		$message .= "CONTACT DATA" . "\n";
@@ -96,6 +97,7 @@
 		mail($to, $subject, $message, $headers);
 
 		// Setup for the user
+        /*
 		$user = $_POST['email'];
 		$usersubject = "Request confirmation";
 		$usermessage = "Dear " . $customer_name . "," . "\n\n" . "Thank you for contacting us. We will reply shortly." . "\n\n";
@@ -104,6 +106,7 @@
 
 		// Send to the user
 		mail($user, $usersubject, $usermessage, $headers);
+        */
 
 		// Success Page
 		echo '<div id="success">';
@@ -116,7 +119,7 @@
 		echo '</svg>';
 		echo '</div>';
 		echo '<h4>Thank you for contacting us.</h4>';
-		echo '<small>Check your mailbox.</small>';
+		echo '<small>We will get back to you in no time.</small>';
 		echo '</div>';
 		echo '<script src="../js/redirect.js"></script>';
 	} else {

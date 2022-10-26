@@ -14,7 +14,7 @@
     <!-- orabel css -->
     <link rel="stylesheet" href="/html/css/style.css">
     <!-- page title -->
-    <title>Orabel</title>
+    <title>Alex & Alicia - professional photographers</title>
 </head>
 
 <body>
@@ -34,11 +34,11 @@
     <!-- page loader end -->
     <div id="orb-dynamic-content" class="transition-fade">
 
-        <div class="orb-page-frame orb-home-1">
+        <div class="orb-page-frame {{ $wrapper_class }}">
 
             <div class="orb-top-bar-frame">
                 <div class="orb-content orb-top-bar">
-                    <a href="index.html" class="orb-logo-frame">
+                    <a href="index.html" class="orb-logo-frame" @if($current != 'home') style="position: relative; top: -20px" @endif>
                         <!-- image logo <img src="img/ui/logo.svg" alt="Orabel">-->
                         <!-- svg logo -->
                         <img src="/html/img/logo_brown3.png" alt="Logo" >
@@ -55,19 +55,19 @@
                         <div class="orb-menu-frame">
                             <nav>
                                 <ul class="orb-menu">
-                                    <li class="orb-has-children orb-current">
-                                        <a href="home-1.html">Home</a>
+                                    <li class="@if($current == 'home') orb-current @endif">
+                                        <a href="/">Home</a>
                                     </li>
-                                    <li class="">
-                                        <a href="about-1.html">About</a>
+                                    <li class=" @if($current == 'portfolio') orb-current @endif">
+                                        <a href="/portfolio">Portfolio</a>
                                     </li>
-                                    <li class="">
-                                        <a href="portfolio-1.html">Reserve photoshoot</a>
+                                    <li class=" @if($current == 'reserve') orb-current @endif">
+                                        <a href="/reserve">Reserve photoshoot</a>
                                     </li>
-                                    <li class="">
-                                        <a href="blog-1.html">Get discount</a>
+                                    <li class=" @if($current == 'discount') orb-current @endif">
+                                        <a href="/discount">Get discount</a>
                                     </li>
-                                    <li class="">
+                                    <li class=" @if($current == 'contact') orb-current @endif">
                                         <a href="/contacts">Contacts</a>
                                     </li>
                                 </ul>
@@ -91,20 +91,20 @@
                         <div class="orb-menu-frame orb-fs-menu">
                             <nav>
                                 <ul class="orb-menu">
-                                    <li class="orb-has-children orb-current">
-                                        <a href="home-1.html">Home</a>
+                                    <li class="@if($current == 'home') orb-current @endif">
+                                        <a href="/">Home</a>
                                     </li>
-                                    <li class="">
-                                        <a href="about-1.html">About</a>
+                                    <li class=" @if($current == 'portfolio') orb-current @endif">
+                                        <a href="/portfolio">Portfolio</a>
                                     </li>
-                                    <li class="">
-                                        <a href="portfolio-1.html">Reserve</a>
+                                    <li class=" @if($current == 'reserve') orb-current @endif">
+                                        <a href="/reserve">Reserve photoshoot</a>
                                     </li>
-                                    <li class="">
-                                        <a href="blog-1.html">Get discount</a>
+                                    <li class=" @if($current == 'discount') orb-current @endif">
+                                        <a href="/discount">Get discount</a>
                                     </li>
-                                    <li class="">
-                                        <a href="contact-1.html">Contacts</a>
+                                    <li class=" @if($current == 'contact') orb-current @endif">
+                                        <a href="/contacts">Contacts</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -113,7 +113,7 @@
                     <div class="orb-g-33 orb-lg-50 orb-sm-100">
                         <div class="rb-object-frame">
                             <div class="orb-photo-frame orb-obj-1">
-                                <img src="/html/img/photo/4.jpg" alt="photo">
+                                <img src="/html/img/vert/1.jpeg" alt="photo">
                             </div>
                         </div>
                     </div>
