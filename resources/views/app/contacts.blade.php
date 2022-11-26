@@ -19,7 +19,8 @@
                         <div class="orb-form-frame">
                             <div class="orb-form-content">
                                 <h2 class="orb-form-title">We are open for cooperation and <br>partnership, write to us</h2>
-                                <form method="POST" id="form" action="/html/php/send.php">
+                                <form method="POST" id="form" action="/contacts">
+                                    @csrf
                                     <div class="orb-grid orb-padding-grid">
                                         <div class="orb-g-50 orb-sm-100">
                                             <div class="orb-group-input">
