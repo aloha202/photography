@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Mailjet\Resources;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,34 @@ Route::get('/', function () {
 
 Route::get('/contacts', function () {
     return view('app.contacts', ['wrapper_class' => 'orb-contact-1', 'current' => 'contact']);
+});
+
+Route::post('/contacts', function () {
+    $mj = new \Mailjet\Client('ec388abec814d4cd4bbb7278601baff3','b37786915dfb2dce118466d53fe90d51',true,['version' => 'v3.1']);
+    $mj = new \Mailjet\Client('****************************1234','****************************abcd',true,['version' => 'v3.1']);
+    $body = [
+        'Messages' => [
+            [
+                'From' => [
+                    'Email' => "alexey.radyuk@gmail.com",
+                    'Name' => "Alex"
+                ],
+                'To' => [
+                    [
+                        'Email' => "alexey.radyuk@gmail.com",
+                        'Name' => "Alex"
+                    ]
+                ],
+                'Subject' => "Greetings from Mailjet.",
+                'TextPart' => "My first Mailjet email",
+                'HTMLPart' => "<h3>Dear passenger 1, welcome to <a href='https://www.mailjet.com/'>Mailjet</a>!</h3><br />May the delivery force be with you!",
+                'CustomID' => "AppGettingStartedTest"
+            ]
+        ]
+    ];
+    $response = $mj->post(Resources::$Email, ['body' => $body]);
+    $response->success() && var_dump($response->getData());
+    die;
 });
 
 
