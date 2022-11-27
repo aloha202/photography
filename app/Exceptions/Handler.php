@@ -55,6 +55,9 @@ class Handler extends ExceptionHandler
 
     public function render($request, Throwable $e)
     {
+        if(\App::hasDebugModeEnabled()){
+            return parent::render($request, $e);
+        }
         if ($this->isHttpException($e)) {
             $message = $e->getMessage();
             if($e->getStatusCode() == 404){
@@ -69,6 +72,7 @@ class Handler extends ExceptionHandler
                 'message' => $e->getMessage()
             ], 500);
         }
+
         return parent::render($request, $e);
     }
 }
