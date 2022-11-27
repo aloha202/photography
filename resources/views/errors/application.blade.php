@@ -1,10 +1,9 @@
-@extends('layouts.redirect')
+@extends('layouts.empty')
 
 
 @section('content')
 
 
-    @if($result)
     <div id="success">
         <div class="icon icon-order-success svg">
             <svg width="72px" height="72px">
@@ -16,19 +15,9 @@
                 </g>
             </svg>
         </div>
-        <h4>Thank you for contacting us.</h4>
-        <small>We will get back to you in no time.</small>
+        <h4>Something went wrong.</h4>
+        <small>{{ $message }}.</small>
     </div>
-
-    @else
-
-    <div style="color: #e9431c">Errors sending message</div>
-    <div id="success">
-    <h4>Something went wrong.</h4>
-    <a class="animated-link" href="/">Go Back</small>
-    </div>
-
-    @endif
 
 
 
