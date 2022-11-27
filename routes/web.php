@@ -72,8 +72,12 @@ Route::get('/discount', function (){
     return view('app.comming', ['wrapper_class' => 'orb-contact-1', 'current' => 'discount']);
 });
 
+Route::get('/message-sent', function (){
+    return view('app.message-sent', ['result' => session('result')]);
+});
+
 Route::get('/error', function (){
-    throw new \Exception('Something went wrong');
+    throw new \Exception('The error is here');
 });
 
 Route::get('/reserve', function (){
