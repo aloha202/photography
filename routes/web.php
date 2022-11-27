@@ -24,35 +24,56 @@ Route::get('/contacts', function () {
 
 Route::post('/contacts', function () {
     $mj = new \Mailjet\Client('ec388abec814d4cd4bbb7278601baff3','b37786915dfb2dce118466d53fe90d51',true,['version' => 'v3.1']);
-    $mj = new \Mailjet\Client('****************************1234','****************************abcd',true,['version' => 'v3.1']);
+    request()->validate([
+        'name' => 'required',
+        'email' => 'required|email',
+        'message' => 'required'
+    ]);
+
+    $name = request()->get('name');
+    $email = request()->get('email');
+    $message = strip_tags(request()->get('message'));
+    $mailBody = "
+    <p><strong>Name: </strong>$name</p>
+    <p><strong>Email: </strong>$email</p>
+    <p><strong>Message: </strong>$message</p>
+    ";
+
     $body = [
         'Messages' => [
             [
                 'From' => [
                     'Email' => "alexey.radyuk@gmail.com",
-                    'Name' => "Alex"
+                    'Name' => "VP Contacts"
                 ],
                 'To' => [
                     [
-                        'Email' => "alexey.radyuk@gmail.com",
+                        'Email' => "gitgittest@protonmail.com",
                         'Name' => "Alex"
                     ]
                 ],
-                'Subject' => "Greetings from Mailjet.",
-                'TextPart' => "My first Mailjet email",
-                'HTMLPart' => "<h3>Dear passenger 1, welcome to <a href='https://www.mailjet.com/'>Mailjet</a>!</h3><br />May the delivery force be with you!",
+                'Subject' => "New message from `$name` on VP",
+                'TextPart' => strip_tags($mailBody),
+                'HTMLPart' => $mailBody,
                 'CustomID' => "AppGettingStartedTest"
             ]
         ]
     ];
     $response = $mj->post(Resources::$Email, ['body' => $body]);
-    $response->success() && var_dump($response->getData());
-    die;
+    if($response->success()){
+        return redirect('/message-sent')->with('result', true);
+    }else{
+        return redirect('/message-sent')->with('result', false);
+    }
 });
 
 
 Route::get('/discount', function (){
     return view('app.comming', ['wrapper_class' => 'orb-contact-1', 'current' => 'discount']);
+});
+
+Route::get('/message-sent', function (){
+    return view('app.message-sent', ['result' => session('result')]);
 });
 
 Route::get('/reserve', function (){
