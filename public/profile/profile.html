@@ -300,10 +300,10 @@
 
         function setKarmaVal(val) {
             $('#karma-value').html(val > 0 ? '+' + val : val);
-            $.get('/setkarma.php', {karma: val});
+            $.get('/profile/setkarma.php', {karma: val});
         }
 
-        $.get('/getkarma.php', function (resp){
+        $.get('/profile/getkarma.php', function (resp){
             setKarmaVal(parseInt(resp));
         });
     });
